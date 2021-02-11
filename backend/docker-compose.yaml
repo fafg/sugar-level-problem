@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+
+  backend:
+    image: fafg/sugar-conc-backend
+    ports:
+      - '8080:4000'
+    environment:
+      DATASET: 300
