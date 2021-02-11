@@ -1,3 +1,6 @@
+# Build Status
+![Sugar-Level-Problem](https://github.com/fafg/sugar-level-problem/workflows/Sugar-Level-Problem/badge.svg)
+
 # Introduction
 This repo describe a problem with a golang implementation as a possible solution. Using a Decision Tree data structure.
 
