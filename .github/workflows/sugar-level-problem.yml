@@ -1,0 +1,37 @@
+name: Sugar-Level-Problem
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore: [ README.md ]
+  pull_request:
+    branches: [ main ]
+    paths-ignore: [ README.md ]
+    
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Go 1.15.x
+      uses: actions/setup-go@v2
+      with:
+        go-version: ^1.15
+      id: go
+
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v2
+
+    - name: Build
+      shell: bash
+      run: |
+        pushd client
+        make build
+        popd
+
+    - name: Test
+      shell: bash
+      run: |
+        pushd client
+        make test
+        popd
