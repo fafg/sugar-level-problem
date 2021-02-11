@@ -98,7 +98,7 @@ Since I have a list of customer `N` I would need to interate against the amount 
 
 > So this way I have a complexity of ` O(n * 3)` in a worst case scenario (all classification needs to navigate the whole tree (three levels)), and this is still linear which is good to this problem.
 
-So, my approach was [to implement each path](client/decisiontree/decision-tree.go) of the graph in order to navigate until the latest leaf(node) in order to get the result.
+So, my approach was [to implement each path](client/decisiontree/decisiontree.go) of the graph in order to navigate until the latest leaf(node) in order to get the result.
 
 ## Build and Test
 
